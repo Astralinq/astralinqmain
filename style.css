@@ -6584,3 +6584,70 @@ body {
     }
 }
 
+/* Sticky Call Button */
+.sticky-call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    border-radius: 50px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.sticky-call-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+}
+
+.sticky-call-btn a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sticky-call-btn i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.sticky-call-btn span {
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(139, 92, 246, 0.5);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sticky-call-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+    }
+
+    .sticky-call-btn a {
+        font-size: 12px;
+    }
+
+    .sticky-call-btn i {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+}
+
